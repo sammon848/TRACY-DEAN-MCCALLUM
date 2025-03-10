@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracy Dean McCallum - Duncanville Coder & Musician 🎸</title>
+    <style>
+        body {
+            background-color: #000080; /* Set background to dark blue */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 5em; /* Make the text large */
+            margin: 20px 0;
+            background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: transparent; /* Make the text transparent so the background shows through */
+        }
+
+        p {
+            font-size: 2em; /* Make the text large */
+            color: white;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .emoji {
+            position: absolute;
+            animation: float 10s linear infinite;
+            font-size: 30px;
+            user-select: none; /* Prevent accidental selection */
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(-50px) translateX(100px); }
+            100% { transform: translateY(0) translateX(200px); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tracy Dean McCallum 🤠</h1>
+    <p>Duncanville Coder & Musician 🎸</p>
+
+    <script>
+        // Function to create a floating emoji
+        function createFloatingEmoji() {
+            const emojis = ['🇺🇸', '🇨🇦', '🇲🇽', '🇬🇧', '🇯🇵', '🇮🇹', '🇫🇷', '🇩🇪', '🇪🇸', '🇦🇺', '🇧🇷', '🇨🇳', '🇮🇳', '🇷🇺', '🇿🇦', '🇰🇷'];
+            const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+            const div = document.createElement('div');
+            div.classList.add('emoji');
+            div.innerText = emoji;
+            div.style.left = (Math.random() * window.innerWidth) + 'px';
+            div.style.top = (Math.random() * window.innerHeight) + 'px';
+            div.style.animationDelay = (Math.random() * 10) + 's'; // Random delay
+            document.body.appendChild(div);
+        }
+
+        // Create multiple floating emojis
+        for (let i = 0; i < 50; i++) {
+            createFloatingEmoji();
+        }
+    </script>
+
+</body>
+</html>
